@@ -37,8 +37,64 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
 
+let squareSize = 10
+
+func drawArrow()
+
+{
+    turtle.drawSelf()
+   
+     
+    turtle.forward(steps: squareSize * 5)
+     
+    turtle.right(by: 90)
+    turtle.forward(steps: squareSize)
+     
+    turtle.left(by: 135)
+    turtle.forward(steps: Int( round(2 * Double(2).squareRoot() * Double(squareSize))))
+     
+    turtle.left(by: 90)
+    turtle.forward(steps: Int( round(2 * Double(2).squareRoot() * Double(squareSize))))
+     
+    turtle.left(by: 135)
+    turtle.forward(steps: squareSize)
+     
+    turtle.right(by: 90)
+    turtle.forward(steps: squareSize * 5)
+     
+    turtle.left(by: 90)
+    turtle.forward(steps: squareSize * 2)
+     
+    turtle.left(by: 90)
+    
+    turtle.drawSelf()
+}
+
+drawArrow()
+
+
+turtle.penUp()
+turtle.setX(to: 50)
+turtle.setY(to: 50)
+
+turtle.penUp()
+turtle.forward(steps: squareSize * 7)
+drawArrow()
+
+turtle.penUp()
+turtle.forward(steps: squareSize * 7)
+drawArrow()
+
+turtle.penUp()
+turtle.forward(steps: squareSize * 7)
+drawArrow()
+
+for _ in 1...7 {
+    drawArrow()
+    turtle.penUp()
+    turtle.forward(steps: squareSize * 7)
+}
 /*:
  ## Show the Live View
  Don't see any results?
