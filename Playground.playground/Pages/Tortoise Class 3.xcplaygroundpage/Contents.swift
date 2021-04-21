@@ -43,9 +43,8 @@ let squareSize = 10
 func drawArrow()
 
 {
-    turtle.drawSelf()
+    turtle.penDown()
    
-     
     turtle.forward(steps: squareSize * 5)
      
     turtle.right(by: 90)
@@ -68,45 +67,25 @@ func drawArrow()
      
     turtle.left(by: 90)
     
-    turtle.drawSelf()
+}
+func startAbove(){
+    turtle.penUp()
+    turtle.right(by: 180)
+    turtle.forward(steps: squareSize * 56)
+    turtle.right(by: 90)
+    turtle.forward(steps: squareSize * 4)
+    turtle.right(by: 90)
+    turtle.penDown()
 }
 
-drawArrow()
-
-
 turtle.penUp()
-turtle.setX(to: 50)
-turtle.setY(to: 50)
 
-turtle.penUp()
-turtle.forward(steps: squareSize * 7)
-drawArrow()
 
-turtle.penUp()
-turtle.forward(steps: squareSize * 7)
-drawArrow()
-
-turtle.penUp()
-turtle.forward(steps: squareSize * 7)
-drawArrow()
-
-for _ in 1...7 {
+for _ in 1...16{
+for _ in 1...8 {
     drawArrow()
     turtle.penUp()
     turtle.forward(steps: squareSize * 7)
 }
-/*:
- ## Show the Live View
- Don't see any results?
- 
- Remember to show the Live View (1 then 2):
- 
- ![timeline](timeline.png "Timeline")
-
- ## Use source control
- To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
- 
- Please commit and push your work often.
- 
- ![source_control](source-control.png "Source Control")
- */
+    startAbove()
+}
