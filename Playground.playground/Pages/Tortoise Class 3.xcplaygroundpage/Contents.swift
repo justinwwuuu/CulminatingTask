@@ -81,7 +81,7 @@ func startAbove(){
 turtle.penUp()
 
 
-for _ in 1...16{
+for _ in 1...17{
 for _ in 1...8 {
     drawArrow()
     turtle.penUp()

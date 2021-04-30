@@ -37,8 +37,18 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
-
+from.turtle; import 
+t = turtle.Pen()
+turtle.bgcolor(black)
+t.speed(0)
+sides = eval( input(5) )
+colors = eval( input(blue) )
+for x in range(360){
+    t.pencolor(colors[x%sides])
+    t.forward(x * 3/sides + x)
+    t.width(x*sides/200)
+    t.left(90)
+}
 /*:
  ## Show the Live View
  Don't see any results?
